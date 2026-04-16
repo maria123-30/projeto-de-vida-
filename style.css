@@ -60,7 +60,10 @@ body {
     display: block;
 } 
 
-
+.ativo{
+    background-color: ver(--botao-ativo);
+    border-bottom: 4px solid var(--verde);
+}
 
 @media screen and (min-width: 768px) {
     .botao {
