@@ -60,8 +60,8 @@ body {
     display: block;
 } 
 
-.ativo{
-    background-color: ver(--botao-ativo);
+.ativo {
+    background-color: var(--botao-ativo);
     border-bottom: 4px solid var(--verde);
 }
 
