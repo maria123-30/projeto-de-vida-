@@ -67,8 +67,8 @@ body {
 
 .aba-texto{
     background-color: var(--texto-fundo);
-    padding: 40px
-    border-radius:0 0 40px 40px;
+    padding: 40px;
+    border-radius: 0 0 40px 40px;
 } 
 
 .aba-conteudo.ativo{
@@ -86,7 +86,7 @@ text-align: center;
 
 .aba.conteudo-titulo-secundario{
     text-align: center;
-    color:var(--verde)
+    color:var(--verde);
     text-transform: uppercase;
 }
 
