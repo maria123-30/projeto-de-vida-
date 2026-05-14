@@ -10,11 +10,13 @@
 }
 
 body {
-  background:url('img/77776649-sereno-lago-cercado-de-exuberante-verde-arvores-refletindo-em-calma-agua-superficie-foto.jpg');
+  background: url('img/77776649-sereno-lago-cercado-de-exuberante-verde-arvores-refletindo-em-calma-agua-superficie-foto.jpg');
   color: var(--branco);
   font-family: "Chakra Petch", sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+  margin: 0;
 }
 
 .conteudo-principal {
@@ -25,20 +27,28 @@ body {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
 }
 
 .titulo-principal {
   text-align: left;
   width: 100%;
   font-size: 32px;
+  padding: 20px;
 }
 
 .titulo-principal span {
   color: var(--verde);
 }
 
+/* Botões */
+.botoes {
+  display: block; /* Empilha no mobile */
+  width: 100%;
+}
+
 .botao {
-  font-family: "Crakra Petch", sans-serif;
+  font-family: "Chakra Petch", sans-serif; /* Corrigido de Crakra para Chakra */
   background-color: var(--botao-inativo);
   color: var(--branco);
   display: flex;
@@ -51,72 +61,81 @@ body {
   border-left: 2px solid var(--botao-ativo);
   border-right: 2px solid var(--botao-ativo);
   border-top: none;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .botao:first-child {
   border-radius: 40px 40px 0 0;
 }
 
-.botoes {
-  display: block;
-}
-
-.botao.ativo{
+.botao.ativo {
   background-color: var(--botao-ativo);
   border-bottom: 4px solid var(--verde);
 }
 
-.abas-textos{
+/* Conteúdo das Abas */
+.abas-textos {
   background-color: var(--texto-fundo);
   padding: 40px;
   border-radius: 0 0 40px 40px;
+  width: 100%;
 }
 
-.aba-conteudo.ativo{
-  display:block;
-}
-
-.aba-conteudo{
+.aba-conteudo {
   display: none;
 }
 
-.aba-conteudo-titulo-principal{
+.aba-conteudo.ativo {
+  display: block;
+}
+
+.aba-conteudo-titulo-principal {
   font-size: 28px;
   text-align: center;
 }
 
-.aba-conteudo-titulo-secundario{
+.aba-conteudo-titulo-secundario {
   text-align: center;
   color: var(--verde);
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
+/* Contador */
 .contador {
   display: flex;
   justify-content: center;
+  gap: 20px; /* Espaçamento entre os dígitos */
 }
-.contador{
-  padding: 0 16px;
+
+.contador-digito {
   text-align: center;
 }
-.contador-digeto-numero{
+
+.contador-digito-numero {
   font-size: 80px;
   margin: 0;
+  font-weight: bold;
 }
-.contador-digito-texto{
+
+.contador-digito-texto {
   color: var(--verde);
   font-size: 20px;
   margin: 0;
 }
 
-@media screen and (min-width: 768px){
-  .botoes{
-   display:flex;
+/* Responsividade */
+@media screen and (min-width: 768px) {
+  .botoes {
+    display: flex;
   }
+  
   .botao:first-child {
-   border-radius: 40px 0 0 0;
+    border-radius: 40px 0 0 0;
   }
+  
   .botao:last-child {
-   border-radius: 0 40px 0 0;
+    border-radius: 0 40px 0 0;
   }
 }
