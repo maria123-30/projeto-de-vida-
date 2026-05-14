@@ -92,8 +92,21 @@ body {
 }
 
 .contador {
-  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+.contador{
+  padding: 0 16px;
   text-align: center;
+}
+.contador-digeto-numero{
+  font-size: 80px;
+  margin: 0;
+}
+.contador-digito-texto{
+  color: var(--verde);
+  font-size: 20px;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px){
